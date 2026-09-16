@@ -1,9 +1,11 @@
-package item;
+package br.edu.ucsal.pokesal.item;
 
-public class Antidoto extends Item {
+public class ItemCura extends Item {
+    private int quantidadeCura;
 
-    public Antidoto(int id, String nome) {
+    public ItemCura(int id, String nome, int quantidadeCura) {
         super(id, nome);
+        this.quantidadeCura = quantidadeCura;
     }
 
     @Override
@@ -14,7 +16,7 @@ public class Antidoto extends Item {
     @Override
     public void aplicarEfeito(Pokesal pokesal) {
         if (podeUsar(pokesal)) {
-            pokesal.removerStatus();
+            pokesal.recuperarHp(quantidadeCura);
         } else {
             System.out.println("Não foi possível aplicar efeito.");
         }

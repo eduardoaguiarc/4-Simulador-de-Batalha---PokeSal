@@ -1,4 +1,4 @@
-package item;
+package br.edu.ucsal.pokesal.item;
 
 public abstract class Item {
     private int id;

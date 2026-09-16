@@ -1,10 +1,10 @@
-package enums;
+package br.edu.ucsal.pokesal.enums;
 
 public enum Status {
     /*
 
      Usei descrição para melhorar a visualização no console,
-     vamos utilizar as constantes ainda das enums.
+     vamos utilizar as constantes ainda das br.edu.ucsal.pokesal.app.enums.
 
      */
 

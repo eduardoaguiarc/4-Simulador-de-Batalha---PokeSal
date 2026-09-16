@@ -1,4 +1,4 @@
-package enums;
+package br.edu.ucsal.pokesal.enums;
 
 public enum TipoTerreno {
     ASFALTO_QUENTE("Asfalto quente"),

@@ -1,4 +1,4 @@
-package enums;
+package br.edu.ucsal.pokesal.enums;
 
 public enum TipoElemental {
     FOGO("Fogo"),
