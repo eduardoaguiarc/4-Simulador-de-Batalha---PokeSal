@@ -1,5 +1,7 @@
 package br.edu.ucsal.pokesal.item;
 
+import br.edu.ucsal.pokesal.pokesal.Pokesal;
+
 public abstract class Item {
     private int id;
     private String nome;

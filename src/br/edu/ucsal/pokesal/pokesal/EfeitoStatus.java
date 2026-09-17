@@ -18,6 +18,10 @@ public class EfeitoStatus {
         this.turnosAtivos = turnosAtivos;
     }
 
+    public Status getTipo() {
+        return tipo;
+    }
+
     public void aplicarFimDoTurno(Pokesal alvo) {
         if (alvo == null || tipo == null || tipo == Status.NENHUM || alvo.estaDerrotado()) {
             return;

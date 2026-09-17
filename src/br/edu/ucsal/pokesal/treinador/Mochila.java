@@ -21,6 +21,10 @@ public class Mochila {
         itens.add(item);
     }
 
+    public List<Item> getItens() {
+        return List.copyOf(itens);
+    }
+
     public boolean possuiItem(Item item) {
         if (item == null) {
             return  false;

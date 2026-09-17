@@ -1,5 +1,7 @@
 package br.edu.ucsal.pokesal.item;
 
+import br.edu.ucsal.pokesal.pokesal.Pokesal;
+
 public class ItemCura extends Item {
     private int quantidadeCura;
 

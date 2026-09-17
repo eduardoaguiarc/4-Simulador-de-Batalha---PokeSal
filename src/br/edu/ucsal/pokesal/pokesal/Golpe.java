@@ -18,7 +18,7 @@ public class Golpe {
     private static final Random RANDOM = new Random();
 
     public Golpe(String nome, int poder, double precisao, TipoElemental tipoElemental,
-                 int maximosUsos, int usosRestantes, Status statusAplicado, double chanceStatus) {
+                 int maximosUsos, Status statusAplicado, double chanceStatus) {
 
         if (nome == null || nome.isBlank()) {
             throw new IllegalArgumentException("O nome do golpe é obrigatório!");
@@ -47,6 +47,12 @@ public class Golpe {
         this.usosRestantes = usosRestantes;
         this.statusAplicado = statusAplicado;
         this.chanceStatus = chanceStatus;
+
+        if (statusAplicado == Status.NENHUM) {
+            this.chanceStatus = 0.0;
+        } else {
+            this.chanceStatus = chanceStatus;
+        }
     }
 
     public boolean podeUsar() {
