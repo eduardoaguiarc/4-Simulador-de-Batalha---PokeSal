@@ -14,6 +14,12 @@ public class Batalha {
     private static final int MAX_ITENS_POR_BATALHA = 2;
     private static final Random RANDOM = new Random();
 
+    private final int id;
+    private final Treinador treinador1;
+    private final Treinador treinador2;
+    private final Arena arena;
+    private final Scanner scanner;
+
     private int numeroTurno;
     private int itensUsadosTreinador1;
     private int itensUsadosTreinador2;
