@@ -51,4 +51,12 @@ public class Arena {
             alvo.recuperarHp(cura);
         }
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public TipoTerreno getTipoTerreno() {
+        return tipoTerreno;
+    }
 }
