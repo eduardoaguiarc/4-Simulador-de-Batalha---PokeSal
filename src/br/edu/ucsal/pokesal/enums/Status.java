@@ -1,26 +1,19 @@
 package br.edu.ucsal.pokesal.enums;
 
+/** Estados de um Pokesal e suas descrições para exibição no console. */
 public enum Status {
-    /*
+  NENHUM("Nenhum"),
+  QUEIMADO("Queimado"),
+  ENVENENADO("Envenenado"),
+  PARALISADO("Paralisado");
 
-     Usei descrição para melhorar a visualização no console,
-     vamos utilizar as constantes ainda das br.edu.ucsal.pokesal.app.enums.
+  private final String descricao;
 
-     */
+  Status(String descricao) {
+    this.descricao = descricao;
+  }
 
-    NENHUM("Nenhum"),
-    QUEIMADO("Queimado"),
-    ENVENENADO("Envenenado"),
-    PARALISADO("Paralisado");
-
-    private final String descricao;
-
-    Status(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
+  public String getDescricao() {
+    return descricao;
+  }
 }
