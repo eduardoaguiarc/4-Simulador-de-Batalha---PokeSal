@@ -12,6 +12,11 @@ public enum TipoTerreno {
     this.descricao = descricao;
   }
 
+  /**
+   * Retorna o nome do terreno para exibição no console.
+   *
+   * @return descrição legível do terreno
+   */
   public String getDescricao() {
     return descricao;
   }

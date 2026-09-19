@@ -15,11 +15,24 @@ public class Antidoto extends Item {
     super(id, nome);
   }
 
+  /**
+   * Verifica se o Pokésal ainda pode batalhar, mesmo que esteja sem status.
+   *
+   * @param pokesal Pokésal que receberá o antídoto
+   * @return {@code true} se o Pokésal não estiver derrotado
+   * @throws NullPointerException se o Pokésal for nulo
+   */
   @Override
   public boolean podeUsar(Pokesal pokesal) {
     return !pokesal.estaDerrotado();
   }
 
+  /**
+   * Remove o status de um Pokésal apto a batalhar ou informa que o uso não foi possível.
+   *
+   * @param pokesal Pokésal cujo status será removido
+   * @throws NullPointerException se o Pokésal for nulo
+   */
   @Override
   public void aplicarEfeito(Pokesal pokesal) {
     if (podeUsar(pokesal)) {

@@ -18,10 +18,20 @@ public abstract class Item {
     this.nome = nome;
   }
 
+  /**
+   * Retorna o identificador atribuído ao item.
+   *
+   * @return identificador do item
+   */
   public int getId() {
     return id;
   }
 
+  /**
+   * Retorna o nome usado para exibir o item na mochila.
+   *
+   * @return nome de exibição do item
+   */
   public String getNome() {
     return nome;
   }

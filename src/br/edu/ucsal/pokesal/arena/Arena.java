@@ -74,10 +74,20 @@ public class Arena {
     }
   }
 
+  /**
+   * Retorna o nome de exibição da arena.
+   *
+   * @return nome da arena
+   */
   public String getNome() {
     return nome;
   }
 
+  /**
+   * Retorna o terreno que determina os efeitos da arena.
+   *
+   * @return tipo de terreno da arena
+   */
   public TipoTerreno getTipoTerreno() {
     return tipoTerreno;
   }

@@ -14,7 +14,10 @@ import java.util.Scanner;
 /** Coordena os turnos, as ações e os efeitos de uma batalha entre dois treinadores. */
 public class Batalha {
 
+  /** Quantidade máxima de itens que cada treinador pode usar em uma batalha. */
   public static final int MAX_ITENS_POR_BATALHA = 2;
+  private static final int DANO_BASE_MINIMO = 1;
+  private static final int FATOR_PORCENTAGEM = 100;
   private static final Random RANDOM = new Random();
 
   private int id;
@@ -164,7 +167,7 @@ public class Batalha {
       Golpe golpe = golpes.get(i);
       System.out.println((i + 1) + " - " + golpe.getNome()
           + " [Poder: " + golpe.getPoder()
-          + ", Precisão: " + (int) (golpe.getPrecisao() * 100) + "%"
+          + ", Precisão: " + (int) (golpe.getPrecisao() * FATOR_PORCENTAGEM) + "%"
           + ", Usos: " + golpe.getUsosRestantes() + "/" + golpe.getMaximosUsos() + "]"
           + (golpe.podeUsar() ? "" : " (sem usos restantes)"));
     }
@@ -252,8 +255,8 @@ public class Batalha {
     double multiplicadorTerreno = arena.calcularMultiplicadorDano(golpe.getTipoElemental());
 
     double danoBase = (ataqueEfetivo + golpe.getPoder()) - defensor.getDefesa();
-    if (danoBase < 1) {
-      danoBase = 1;
+    if (danoBase < DANO_BASE_MINIMO) {
+      danoBase = DANO_BASE_MINIMO;
     }
 
     double danoFinal = danoBase * multiplicadorTipo * multiplicadorTerreno;

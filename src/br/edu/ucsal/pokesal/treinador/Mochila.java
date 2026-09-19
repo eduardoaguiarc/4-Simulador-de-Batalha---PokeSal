@@ -28,6 +28,11 @@ public class Mochila {
     itens.add(item);
   }
 
+  /**
+   * Retorna uma cópia não modificável da lista de itens presentes na mochila.
+   *
+   * @return lista dos itens existentes no momento da consulta
+   */
   public List<Item> getItens() {
     return List.copyOf(itens);
   }

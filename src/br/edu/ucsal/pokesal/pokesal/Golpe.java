@@ -119,38 +119,83 @@ public class Golpe {
     usosRestantes = maximosUsos;
   }
 
+  /**
+   * Retorna o nome usado para identificar o golpe nas opções de ataque.
+   *
+   * @return nome de exibição do golpe
+   */
   public String getNome() {
     return nome;
   }
 
+  /**
+   * Retorna o poder base usado no cálculo de dano do golpe.
+   *
+   * @return poder de ataque do golpe
+   */
   public int getPoder() {
     return poder;
   }
 
+  /**
+   * Retorna a probabilidade usada para sortear o acerto do golpe.
+   *
+   * @return precisão configurada para o golpe
+   */
   public double getPrecisao() {
     return precisao;
   }
 
+  /**
+   * Retorna o tipo usado para calcular a efetividade e os bônus de terreno do golpe.
+   *
+   * @return tipo elemental do golpe
+   */
   public TipoElemental getTipoElemental() {
     return tipoElemental;
   }
 
+  /**
+   * Retorna o limite de usos restaurado ao reiniciar o golpe.
+   *
+   * @return quantidade máxima de usos do golpe
+   */
   public int getMaximosUsos() {
     return maximosUsos;
   }
 
+  /**
+   * Retorna quantas vezes o golpe ainda pode ser utilizado.
+   *
+   * @return quantidade de usos disponíveis
+   */
   public int getUsosRestantes() {
     return usosRestantes;
   }
 
+  /**
+   * Retorna o status que o golpe pode aplicar ao defensor.
+   *
+   * @return status associado ao golpe
+   */
   public Status getStatusAplicado() {
     return statusAplicado;
   }
 
+  /**
+   * Retorna a probabilidade de aplicar o status associado ao golpe.
+   *
+   * @return chance de aplicação, ou zero quando o status é nenhum
+   */
   public double getChanceStatus() {
     return chanceStatus;
   }
 
+  /**
+   * Descreve os atributos do golpe, incluindo seus usos disponíveis e o status associado.
+   *
+   * @return representação textual do golpe
+   */
   @Override
   public String toString() {
     return "Golpe{"

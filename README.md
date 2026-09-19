@@ -127,4 +127,15 @@ Estes são os diagramas usados na modelagem do projeto:
 
 ## Qualidade do código e próximos passos
 
+O código segue estas práticas:
+
+- **Naming Conventions:** métodos e variáveis em `camelCase`, classes e enums em `PascalCase`
+  e constantes em `UPPER_CASE`.
+- **Javadoc:** documentação nas classes, enums, construtores e métodos públicos, incluindo
+  getters, setters e métodos sobrescritos.
+- **Valores fixos nomeados:** constantes para dano-base mínimo, poderes e parâmetros dos golpes,
+  cura dos itens, multiplicadores de vantagem e efeitos de terreno e status.
+- **Formatação:** linhas de até **100 caracteres** nos arquivos Java e recuo de **2 espaços**,
+  sem tabulações na indentação.
+
 Os 14 arquivos Java foram revisados com **Checkstyle 14.1.0**, usando **Google Checks**, sem avisos ou erros na verificação. A configuração do plugin CheckStyle-IDEA está incluída em [`.idea/checkstyle-idea.xml`](.idea/checkstyle-idea.xml). Para conferir pelo IntelliJ, use essa versão do Checkstyle e execute a análise de todos os arquivos Java com Google Checks.

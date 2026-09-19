@@ -13,6 +13,11 @@ public enum Status {
     this.descricao = descricao;
   }
 
+  /**
+   * Retorna a descrição do status para exibição no console.
+   *
+   * @return descrição legível do status
+   */
   public String getDescricao() {
     return descricao;
   }

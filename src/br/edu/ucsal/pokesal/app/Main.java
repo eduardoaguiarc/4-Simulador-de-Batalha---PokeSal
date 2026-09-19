@@ -18,10 +18,26 @@ import java.util.Scanner;
 /** Ponto de entrada do torneio de Pokésal pelo console. */
 public class Main {
 
+  private static final int PODER_INVESTIDA = 20;
+  private static final double PRECISAO_INVESTIDA = 1.0;
+  private static final int MAX_USOS_INVESTIDA = 20;
+  private static final int PODER_ATAQUE_ELEMENTAL = 25;
+  private static final double PRECISAO_ATAQUE_ELEMENTAL = 0.9;
+  private static final int MAX_USOS_ATAQUE_ELEMENTAL = 15;
+  private static final int PODER_INVESTIDA_ELEMENTAL = 30;
+  private static final double PRECISAO_INVESTIDA_ELEMENTAL = 0.75;
+  private static final int MAX_USOS_INVESTIDA_ELEMENTAL = 10;
+  private static final int PODER_GOLPE_STATUS = 15;
+  private static final double PRECISAO_GOLPE_STATUS = 0.85;
+  private static final int MAX_USOS_GOLPE_STATUS = 10;
+  private static final double CHANCE_APLICAR_STATUS = 0.3;
+  private static final double SEM_CHANCE_STATUS = 0.0;
+  private static final int CURA_POTION = 20;
+  private static final int CURA_SUPER_POTION = 40;
+
   /**
    * Cadastra os treinadores, seleciona a arena e inicia a batalha.
    *
-   * @param args argumentos de linha de comando, não utilizados
    */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
@@ -95,27 +111,34 @@ public class Main {
   private static List<Golpe> criarGolpesIniciais(TipoElemental tipo) {
     List<Golpe> golpes = new ArrayList<>();
 
-    golpes.add(new Golpe("Investida", 20, 1.0, tipo, 20, Status.NENHUM, 0.0));
-    golpes.add(new Golpe("Ataque de " + tipo, 25, 0.9, tipo, 15, Status.NENHUM, 0.0));
+    golpes.add(new Golpe("Investida", PODER_INVESTIDA, PRECISAO_INVESTIDA, tipo,
+        MAX_USOS_INVESTIDA, Status.NENHUM, SEM_CHANCE_STATUS));
+    golpes.add(new Golpe("Ataque de " + tipo, PODER_ATAQUE_ELEMENTAL, PRECISAO_ATAQUE_ELEMENTAL,
+        tipo, MAX_USOS_ATAQUE_ELEMENTAL, Status.NENHUM, SEM_CHANCE_STATUS));
     golpes.add(criarGolpeDeStatus(tipo));
-    golpes.add(new Golpe("Investida de " + tipo, 30, 0.75, tipo, 10, Status.NENHUM, 0.0));
+    golpes.add(new Golpe("Investida de " + tipo, PODER_INVESTIDA_ELEMENTAL,
+        PRECISAO_INVESTIDA_ELEMENTAL, tipo, MAX_USOS_INVESTIDA_ELEMENTAL,
+        Status.NENHUM, SEM_CHANCE_STATUS));
 
     return golpes;
   }
 
   private static Golpe criarGolpeDeStatus(TipoElemental tipo) {
     return switch (tipo) {
-      case FOGO -> new Golpe("Chama", 15, 0.85, tipo, 10, Status.QUEIMADO, 0.3);
-      case AGUA -> new Golpe("Onda de Trovão", 15, 0.85, tipo, 10, Status.PARALISADO, 0.3);
-      case PLANTA -> new Golpe("Pó Venenoso", 15, 0.85, tipo, 10, Status.ENVENENADO, 0.3);
+      case FOGO -> new Golpe("Chama", PODER_GOLPE_STATUS, PRECISAO_GOLPE_STATUS,
+          tipo, MAX_USOS_GOLPE_STATUS, Status.QUEIMADO, CHANCE_APLICAR_STATUS);
+      case AGUA -> new Golpe("Onda de Trovão", PODER_GOLPE_STATUS, PRECISAO_GOLPE_STATUS,
+          tipo, MAX_USOS_GOLPE_STATUS, Status.PARALISADO, CHANCE_APLICAR_STATUS);
+      case PLANTA -> new Golpe("Pó Venenoso", PODER_GOLPE_STATUS, PRECISAO_GOLPE_STATUS,
+          tipo, MAX_USOS_GOLPE_STATUS, Status.ENVENENADO, CHANCE_APLICAR_STATUS);
     };
 
   }
 
   private static Mochila montarMochila() {
     Mochila mochila = new Mochila();
-    mochila.adicionarItem(new ItemCura(1, "Potion", 20));
-    mochila.adicionarItem(new ItemCura(2, "Super Potion", 40));
+    mochila.adicionarItem(new ItemCura(1, "Potion", CURA_POTION));
+    mochila.adicionarItem(new ItemCura(2, "Super Potion", CURA_SUPER_POTION));
     mochila.adicionarItem(new Antidoto(3, "Antidote"));
     return mochila;
   }

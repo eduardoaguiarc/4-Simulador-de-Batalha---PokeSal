@@ -204,42 +204,92 @@ public class Pokesal {
     }
   }
 
+  /**
+   * Retorna o identificador atribuído ao Pokésal.
+   *
+   * @return identificador do Pokésal
+   */
   public int getId() {
     return id;
   }
 
+  /**
+   * Retorna o nome usado para identificar o Pokésal na batalha.
+   *
+   * @return nome de exibição do Pokésal
+   */
   public String getNome() {
     return nome;
   }
 
+  /**
+   * Retorna os pontos de vida restantes após danos e curas.
+   *
+   * @return HP atual do Pokésal
+   */
   public int getHpAtual() {
     return hpAtual;
   }
 
+  /**
+   * Retorna o limite de pontos de vida usado na recuperação de HP.
+   *
+   * @return HP máximo do Pokésal
+   */
   public int getHpMaximo() {
     return hpMaximo;
   }
 
+  /**
+   * Retorna o atributo de ataque antes dos modificadores de status.
+   *
+   * @return ataque base do Pokésal
+   */
   public int getAtaque() {
     return ataque;
   }
 
+  /**
+   * Retorna o atributo de defesa usado para reduzir o dano recebido.
+   *
+   * @return defesa do Pokésal
+   */
   public int getDefesa() {
     return defesa;
   }
 
+  /**
+   * Retorna o atributo de velocidade antes dos modificadores de status.
+   *
+   * @return velocidade base do Pokésal
+   */
   public int getVelocidade() {
     return velocidade;
   }
 
+  /**
+   * Retorna o tipo usado para determinar a efetividade dos golpes recebidos.
+   *
+   * @return tipo elemental do Pokésal
+   */
   public TipoElemental getTipoElemental() {
     return tipoElemental;
   }
 
+  /**
+   * Retorna uma visão da lista de golpes que impede adicionar ou remover elementos.
+   *
+   * @return lista não modificável que acompanha os golpes adicionados ao Pokésal
+   */
   public List<Golpe> getGolpes() {
     return Collections.unmodifiableList(golpes);
   }
 
+  /**
+   * Retorna o efeito responsável pelo status atual e por sua duração.
+   *
+   * @return efeito de status associado ao Pokésal
+   */
   public EfeitoStatus getEfeitoStatus() {
     return efeitoStatus;
   }

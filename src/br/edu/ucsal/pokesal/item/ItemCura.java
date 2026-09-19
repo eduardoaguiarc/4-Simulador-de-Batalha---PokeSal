@@ -18,11 +18,25 @@ public class ItemCura extends Item {
     this.quantidadeCura = quantidadeCura;
   }
 
+  /**
+   * Verifica se o Pokésal ainda pode batalhar, mesmo que esteja com HP completo.
+   *
+   * @param pokesal Pokésal que receberá a cura
+   * @return {@code true} se o Pokésal não estiver derrotado
+   * @throws NullPointerException se o Pokésal for nulo
+   */
   @Override
   public boolean podeUsar(Pokesal pokesal) {
     return !pokesal.estaDerrotado();
   }
 
+  /**
+   * Recupera HP de um Pokésal apto a batalhar, respeitando seu HP máximo.
+   *
+   * @param pokesal Pokésal que receberá a cura; alvos derrotados geram uma mensagem de falha
+   * @throws NullPointerException se o Pokésal for nulo
+   * @throws IllegalArgumentException se a cura aplicada tiver quantidade negativa
+   */
   @Override
   public void aplicarEfeito(Pokesal pokesal) {
     if (podeUsar(pokesal)) {

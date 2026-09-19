@@ -25,22 +25,47 @@ public class Treinador {
     this.mochila = mochila;
   }
 
+  /**
+   * Retorna o nome usado para identificar o treinador na batalha.
+   *
+   * @return nome de exibição do treinador
+   */
   public String getNome() {
     return nome;
   }
 
+  /**
+   * Atualiza o nome de exibição do treinador.
+   *
+   * @param nome novo nome do treinador
+   */
   public void setNome(String nome) {
     this.nome = nome;
   }
 
+  /**
+   * Retorna o Pokésal escolhido para participar da batalha.
+   *
+   * @return Pokésal do treinador, ou {@code null} se ainda não foi escolhido
+   */
   public Pokesal getPokesal() {
     return pokesal;
   }
 
+  /**
+   * Retorna o identificador atribuído ao treinador.
+   *
+   * @return identificador do treinador
+   */
   public int getId() {
     return id;
   }
 
+  /**
+   * Retorna a mochila usada para armazenar e consumir os itens do treinador.
+   *
+   * @return mochila associada ao treinador
+   */
   public Mochila getMochila() {
     return mochila;
   }

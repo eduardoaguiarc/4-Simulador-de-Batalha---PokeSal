@@ -26,6 +26,11 @@ public class EfeitoStatus {
     this.turnosAtivos = turnosAtivos;
   }
 
+  /**
+   * Retorna o status atual, que passa a nenhum quando sua duração expira.
+   *
+   * @return status representado por este efeito
+   */
   public Status getTipo() {
     return tipo;
   }

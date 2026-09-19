@@ -16,6 +16,11 @@ public enum TipoElemental {
     this.descricao = descricao;
   }
 
+  /**
+   * Retorna o nome do tipo elemental para exibição no console.
+   *
+   * @return descrição legível do tipo elemental
+   */
   public String getDescricao() {
     return descricao;
   }
