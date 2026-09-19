@@ -1,7 +1,5 @@
 # Pokésal — Simulador de Batalha
 
-O estacionamento da UCSal Pituaçu virou uma arena. Dois treinadores escolhem seus Pokésal iniciais e disputam uma batalha por turnos, em que o tipo do golpe, o terreno e o momento de usar um item podem mudar o resultado.
-
 Este é um projeto acadêmico desenvolvido em Java para colocar em prática orientação a objetos, modelagem UML e regras de negócio. A partida acontece pelo console, com os dois jogadores usando o mesmo terminal.
 
 ## Como funciona a partida
@@ -117,7 +115,7 @@ Os pacotes ficam em `src/br/edu/ucsal/pokesal`:
 
 ## Diagramas
 
-Estes são os diagramas usados na modelagem do projeto. Algumas assinaturas e atributos do diagrama de classes diferem da implementação atual; o código é a referência para executar o sistema.
+Estes são os diagramas usados na modelagem do projeto:
 
 ### Casos de uso
 
