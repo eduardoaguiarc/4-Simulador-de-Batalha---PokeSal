@@ -44,7 +44,7 @@ public class Golpe {
         this.precisao = precisao;
         this.tipoElemental = tipoElemental;
         this.maximosUsos = maximosUsos;
-        this.usosRestantes = usosRestantes;
+        this.usosRestantes = maximosUsos;
         this.statusAplicado = statusAplicado;
         this.chanceStatus = chanceStatus;
 
