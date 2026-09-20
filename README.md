@@ -79,26 +79,6 @@ cd Simulador-de-Batalha---PokeSal
 3. Execute o método `main` de [`Main.java`](src/br/edu/ucsal/pokesal/app/Main.java).
 4. Siga as opções exibidas no console.
 
-### Pelo terminal
-
-No **Windows, com PowerShell**:
-
-```powershell
-New-Item -ItemType Directory -Force out/classes | Out-Null
-$fontes = Get-ChildItem src -Recurse -Filter *.java | ForEach-Object { $_.FullName }
-javac --release 21 -encoding UTF-8 -d out/classes $fontes
-java -cp out/classes br.edu.ucsal.pokesal.app.Main
-```
-
-No **Linux ou macOS**:
-
-```bash
-mkdir -p out/classes
-find src -name '*.java' > out/fontes.txt
-javac --release 21 -encoding UTF-8 -d out/classes @out/fontes.txt
-java -cp out/classes br.edu.ucsal.pokesal.app.Main
-```
-
 ## Organização do código
 
 Os pacotes ficam em `src/br/edu/ucsal/pokesal`:
