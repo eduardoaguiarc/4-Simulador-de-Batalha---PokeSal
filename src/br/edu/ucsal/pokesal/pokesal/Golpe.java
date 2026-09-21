@@ -113,6 +113,13 @@ public class Golpe {
   }
 
   /**
+   *  Restaura a quantidade de usos restantes do golpe para o valor máximo permitido.
+   */
+  public void resetarUsos() {
+    usosRestantes = maximosUsos;
+  }
+
+  /**
    * Retorna o nome usado para identificar o golpe nas opções de ataque.
    *
    * @return nome de exibição do golpe

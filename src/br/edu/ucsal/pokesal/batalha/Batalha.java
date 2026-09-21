@@ -56,6 +56,9 @@ public class Batalha {
     iniciada = true;
     numeroTurno = 0;
 
+    treinador1.getPokesal().resetarUsosDosGolpes();
+    treinador2.getPokesal().resetarUsosDosGolpes();
+
     System.out.println("=== BATALHA INICIADA: " + treinador1.getNome()
         + " vs " + treinador2.getNome() + " ===");
     System.out.println("Arena: " + arena.getNome() + " (" + arena.getTipoTerreno() + ")");

@@ -103,6 +103,15 @@ public class Pokesal {
   }
 
   /**
+   * Restaura a quantidade de usos de todos os golpes do Pokésal.
+   */
+  public void resetarUsosDosGolpes() {
+    for (Golpe golpe : golpes) {
+      golpe.resetarUsos();
+    }
+  }
+
+  /**
    * Reduz o HP atual sem permitir valores abaixo de zero.
    *
    * @param dano quantidade de HP a remover
