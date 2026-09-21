@@ -42,7 +42,7 @@ Quem tiver a maior velocidade efetiva age primeiro. Se as velocidades forem igua
 Os golpes também podem aplicar efeitos de status:
 
 - **Queimado:** reduz o ataque pela metade e causa dano ao final do turno.
-- **Envenenado:** causa dano ao final do turno. Na versão atual, esse dano é de 12,5% do HP máximo por turno.
+- **Envenenado:** causa dano ao final do turno. 
 - **Paralisado:** reduz a velocidade pela metade, influenciando a ordem das ações.
 
 Enquanto a batalha continuar, os efeitos de terreno e o dano de status são aplicados ao final de cada turno.
