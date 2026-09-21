@@ -19,15 +19,6 @@ public abstract class Item {
   }
 
   /**
-   * Retorna o identificador atribuído ao item.
-   *
-   * @return identificador do item
-   */
-  public int getId() {
-    return id;
-  }
-
-  /**
    * Retorna o nome usado para exibir o item na mochila.
    *
    * @return nome de exibição do item

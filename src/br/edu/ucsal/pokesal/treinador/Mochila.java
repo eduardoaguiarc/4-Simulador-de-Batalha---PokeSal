@@ -38,20 +38,6 @@ public class Mochila {
   }
 
   /**
-   * Verifica se um item está presente na mochila.
-   *
-   * @param item item a procurar
-   * @return {@code true} se a mochila contiver o item; {@code false} se ele for nulo ou ausente
-   */
-  public boolean possuiItem(Item item) {
-    if (item == null) {
-      return false;
-    }
-
-    return itens.contains(item);
-  }
-
-  /**
    * Remove a primeira ocorrência de um item da mochila.
    *
    * @param item item a remover

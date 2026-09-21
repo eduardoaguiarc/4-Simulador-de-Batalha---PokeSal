@@ -2,22 +2,7 @@ package br.edu.ucsal.pokesal.enums;
 
 /** Tipos de terreno disponíveis para as batalhas. */
 public enum TipoTerreno {
-  ASFALTO_QUENTE("Asfalto quente"),
-  POCA_DE_CHUVA("Poça de chuva"),
-  CANTEIRO_CENTRAL("Canteiro central");
-
-  private final String descricao;
-
-  TipoTerreno(String descricao) {
-    this.descricao = descricao;
-  }
-
-  /**
-   * Retorna o nome do terreno para exibição no console.
-   *
-   * @return descrição legível do terreno
-   */
-  public String getDescricao() {
-    return descricao;
-  }
+  ASFALTO_QUENTE,
+  POCA_DE_CHUVA,
+  CANTEIRO_CENTRAL
 }

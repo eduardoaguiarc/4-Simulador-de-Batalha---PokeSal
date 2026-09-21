@@ -196,24 +196,6 @@ public class Pokesal {
   }
 
   /**
-   * Restaura a quantidade máxima de usos de todos os golpes.
-   */
-  public void reiniciarUsosDosGolpes() {
-    for (Golpe golpe : golpes) {
-      golpe.reiniciarUsos();
-    }
-  }
-
-  /**
-   * Retorna o identificador atribuído ao Pokésal.
-   *
-   * @return identificador do Pokésal
-   */
-  public int getId() {
-    return id;
-  }
-
-  /**
    * Retorna o nome usado para identificar o Pokésal na batalha.
    *
    * @return nome de exibição do Pokésal
@@ -241,30 +223,12 @@ public class Pokesal {
   }
 
   /**
-   * Retorna o atributo de ataque antes dos modificadores de status.
-   *
-   * @return ataque base do Pokésal
-   */
-  public int getAtaque() {
-    return ataque;
-  }
-
-  /**
    * Retorna o atributo de defesa usado para reduzir o dano recebido.
    *
    * @return defesa do Pokésal
    */
   public int getDefesa() {
     return defesa;
-  }
-
-  /**
-   * Retorna o atributo de velocidade antes dos modificadores de status.
-   *
-   * @return velocidade base do Pokésal
-   */
-  public int getVelocidade() {
-    return velocidade;
   }
 
   /**

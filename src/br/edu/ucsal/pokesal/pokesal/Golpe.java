@@ -113,13 +113,6 @@ public class Golpe {
   }
 
   /**
-   * Restaura a quantidade máxima de usos do golpe.
-   */
-  public void reiniciarUsos() {
-    usosRestantes = maximosUsos;
-  }
-
-  /**
    * Retorna o nome usado para identificar o golpe nas opções de ataque.
    *
    * @return nome de exibição do golpe
@@ -156,7 +149,7 @@ public class Golpe {
   }
 
   /**
-   * Retorna o limite de usos restaurado ao reiniciar o golpe.
+   * Retorna a quantidade máxima de usos permitida para o golpe.
    *
    * @return quantidade máxima de usos do golpe
    */
@@ -180,32 +173,5 @@ public class Golpe {
    */
   public Status getStatusAplicado() {
     return statusAplicado;
-  }
-
-  /**
-   * Retorna a probabilidade de aplicar o status associado ao golpe.
-   *
-   * @return chance de aplicação, ou zero quando o status é nenhum
-   */
-  public double getChanceStatus() {
-    return chanceStatus;
-  }
-
-  /**
-   * Descreve os atributos do golpe, incluindo seus usos disponíveis e o status associado.
-   *
-   * @return representação textual do golpe
-   */
-  @Override
-  public String toString() {
-    return "Golpe{"
-        + "nome='" + nome + '\''
-        + ", poder=" + poder
-        + ", precisao=" + precisao
-        + ", tipoElemental=" + tipoElemental
-        + ", usosRestantes=" + usosRestantes + "/" + maximosUsos
-        + ", statusAplicado=" + statusAplicado
-        + ", chanceStatus=" + chanceStatus
-        + '}';
   }
 }

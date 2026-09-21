@@ -2,28 +2,13 @@ package br.edu.ucsal.pokesal.enums;
 
 /** Tipos elementais e suas relações de efetividade nos ataques. */
 public enum TipoElemental {
-  FOGO("Fogo"),
-  AGUA("Água"),
-  PLANTA("Planta");
-
-  private String descricao;
+  FOGO,
+  AGUA,
+  PLANTA;
 
   private static final double MULTIPLICADOR_SUPER_EFETIVO = 2.0;
   private static final double MULTIPLICADOR_POUCO_EFETIVO = 0.5;
   private static final double MULTIPLICADOR_NEUTRO = 1.0;
-
-  TipoElemental(String descricao) {
-    this.descricao = descricao;
-  }
-
-  /**
-   * Retorna o nome do tipo elemental para exibição no console.
-   *
-   * @return descrição legível do tipo elemental
-   */
-  public String getDescricao() {
-    return descricao;
-  }
 
   /**
    * Calcula a efetividade deste tipo elemental contra o tipo do defensor.
