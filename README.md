@@ -2,6 +2,9 @@
 
 Este é um projeto acadêmico desenvolvido em Java para colocar em prática orientação a objetos, modelagem UML e regras de negócio. A partida acontece pelo console, com os dois jogadores usando o mesmo terminal.
 
+# Link Video Explicativo
+https://youtu.be/_2LNdvr_v-I
+
 ## Como funciona a partida
 
 Cada treinador informa seu nome e escolhe **um único Pokésal**. Depois, os jogadores escolhem o terreno da arena e a batalha começa. A cada ação, é possível atacar ou usar um item da mochila. A partida termina quando um dos Pokésal fica sem HP.
