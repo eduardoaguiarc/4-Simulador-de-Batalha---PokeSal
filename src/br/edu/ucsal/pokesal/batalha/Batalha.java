@@ -274,8 +274,7 @@ public class Batalha {
    */
   public void executarUsoItem(Treinador treinador, Item item) {
     if (quantidadeItensUsados(treinador) >= MAX_ITENS_POR_BATALHA) {
-      System.out.println(treinador.getNome() + " já atingiu o limite de itens por batalha.");
-      return;
+      throw new IllegalStateException(treinador.getNome() + " já atingiu o limite de itens por batalha.");
     }
 
     Pokesal pokesal = treinador.getPokesal();
