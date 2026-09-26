@@ -110,6 +110,36 @@ Estes são os diagramas usados na modelagem do projeto:
 
 ## Qualidade do código
 
+### Relatório de testes e rastreabilidade
+
+- [Relatório detalhado dos testes](docs/testes/RELATORIO-TESTES.md): cenários,
+  entradas, resultados esperados e observados, cobertura e evidências da execução.
+- [Matriz de rastreabilidade](docs/testes/MATRIZ-RASTREABILIDADE.md): relação entre
+  requisitos, implementação, testes e lacunas de validação.
+
+Na execução documentada, os oito testes passaram no JUnit; um deles está vazio
+e não valida comportamento. O relatório distingue esse caso dos sete testes
+com asserções e registra 40,0% de cobertura de linhas pelo JaCoCo.
+
+### SonarQube e cobertura de testes
+
+O [relatório de análise](docs/sonarqube/RELATORIO.md) registra o estado da
+execução e as evidências de testes e cobertura. A tentativa de análise do
+SonarQube depende de autenticação para concluir a coleta de **Code Smells,
+Bugs, Vulnerabilities e Coverage %**. O relatório informa explicitamente
+quando uma métrica ainda não está disponível.
+
+Para executar os testes, gerar a cobertura JaCoCo e analisar o projeto:
+
+```powershell
+# Requer JDK 21+, sonar-scanner, SonarQube local e SONAR_TOKEN no ambiente.
+powershell -ExecutionPolicy Bypass -File scripts/analisar-sonar.ps1
+```
+
+Use `-SomenteTestes` para executar apenas testes e cobertura local.
+
+### Práticas adotadas
+
 O código segue estas práticas:
 
 - **Naming Conventions:** métodos e variáveis em `camelCase`, classes e enums em `PascalCase`
